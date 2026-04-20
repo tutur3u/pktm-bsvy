@@ -76,7 +76,7 @@ export function LeadForm({
       <div className="space-y-5">
         <div className="space-y-2">
           <h3
-            className={`text-center text-[1.65rem] font-black uppercase leading-tight md:text-[2.3rem] ${titleClass}`}
+            className={`text-center text-[1.65rem] mt-4 font-black uppercase leading-tight md:text-[2.3rem] ${titleClass}`}
           >
             {title}
           </h3>
@@ -94,7 +94,7 @@ export function LeadForm({
           <input
             autoComplete="name"
             name="name"
-            placeholder="Họ tên*:"
+            placeholder="Họ tên:"
             value={values.name}
             onChange={(event) =>
               setValues((current) => ({ ...current, name: event.target.value }))
@@ -114,7 +114,7 @@ export function LeadForm({
             autoComplete="tel"
             inputMode="tel"
             name="phone"
-            placeholder="Số điện thoại*:"
+            placeholder="Số điện thoại:"
             value={values.phone}
             onChange={(event) =>
               setValues((current) => ({

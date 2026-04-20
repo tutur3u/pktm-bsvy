@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { LeadForm } from "../lead-form";
-import {
-    HOTLINE_HREF,
-    stats,
-} from "./content";
+import { HOTLINE_HREF, stats } from "./content";
 
 export function EffectivenessSection() {
   return (
@@ -31,20 +28,27 @@ export function EffectivenessSection() {
 
         <div
           id="quick-register"
-          className="relative mt-6 overflow-hidden rounded-[32px] bg-[#1da6e6] shadow-[0_28px_60px_rgba(29,166,230,0.3)]"
+          className="relative mt-6 overflow-hidden -mx-4 md:rounded-[32px] bg-[#1da6e6] shadow-[0_28px_60px_rgba(29,166,230,0.3)]"
         >
           <div className="grid gap-6 md:grid-cols-[minmax(0,0.95fr)_minmax(340px,0.75fr)] md:items-end">
-            <div className="relative min-h-[280px] overflow-hidden md:min-h-[420px]">
+            <div className="relative min-h-[280px] h-full overflow-hidden md:min-h-[420px]">
               <Image
                 src="/assets/quick-register-photo.jpg"
                 alt="Bé trai vui vẻ trong phần đăng ký khám nhanh."
                 fill
-                className="object-cover"
+                className="object-cover md:block hidden h-full"
+                sizes="(max-width: 768px) 100vw, 52vw"
+              />
+              <Image
+                src="/assets/mobile-quick-register-photo.png"
+                alt="Bé trai vui vẻ trong phần đăng ký khám nhanh."
+                fill
+                className="object-cover md:hidden h-full"
                 sizes="(max-width: 768px) 100vw, 52vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#1da6e6]/22 via-transparent to-transparent" />
               <div className="relative z-10 flex h-full items-center justify-center px-6 py-8 md:justify-start md:px-10">
-                <p className="max-w-[16ch] text-center text-[2rem] font-light leading-tight text-white md:text-left md:text-[2.6rem]">
+                <p className="max-w-[16ch] text-center md:ml-0 ml-24 text-[1.5rem] md:text-[2rem] font-light leading-tight text-white md:text-left md:text-[2.6rem]">
                   Hơn <span className="font-black text-[#51ff8a]">2000</span> ca
                   phẫu thuật thành công, giúp các con tự tin viết tiếp tương lai
                 </p>

@@ -34,14 +34,23 @@ export function HeroSection() {
         </div>
       </div>
       <Image
-          priority
-          src="/assets/mobile-contact.png"
-          alt="Hero giới thiệu điều trị lõm ngực cùng PGS TS BS. Trần Thanh Vỹ."
-          width={774}
-          height={161}
-          className="h-auto w-full -translate-y-2.5 border-y-2 md:hidden"
-          sizes="100vw"
-        />
+        priority
+        src="/assets/mobile-contact.png"
+        alt="Hero giới thiệu điều trị lõm ngực cùng PGS TS BS. Trần Thanh Vỹ."
+        width={774}
+        height={161}
+        className="h-auto w-full -translate-y-2.5 border-y-2 md:hidden"
+        sizes="100vw"
+      />
+      <Image
+        priority
+        src="/assets/mobile-feature.png"
+        alt="Hero giới thiệu điều trị lõm ngực cùng PGS TS BS. Trần Thanh Vỹ."
+        width={774}
+        height={161}
+        className="h-auto w-full -translate-y-8 border-y-2 md:hidden"
+        sizes="100vw"
+      />
     </section>
   );
 }
