@@ -11,10 +11,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  process.env.SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+const siteUrl = 'https://https://dieutrilomnguc.vn/'
 
 const siteName = "Phòng khám PGS TS BS. Trần Thanh Vỹ";
 const pageTitle = "Điều trị lõm ngực bằng phương pháp Nuss";
@@ -53,20 +50,11 @@ export const metadata: Metadata = {
     siteName,
     title: `${pageTitle} | ${siteName}`,
     description: pageDescription,
-    images: [
-      {
-        url: "/opengraph-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Điều trị lõm ngực bằng phương pháp Nuss cùng PGS TS BS. Trần Thanh Vỹ",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${pageTitle} | ${siteName}`,
     description: pageDescription,
-    images: ["/opengraph-image.jpg"],
   },
   robots: {
     index: true,
