@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { severityCards } from "./content";
+import { MobileCarousel } from "./mobile-carousel";
 
 export function SeveritySection() {
   return (
@@ -8,7 +11,25 @@ export function SeveritySection() {
         <h2 className="text-center text-[1.85rem] font-black uppercase leading-tight text-[#ff7a00] md:text-[3rem]">
           Hiểu đúng về mức độ lõm ngực của con
         </h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
+        <MobileCarousel
+          items={severityCards}
+          getKey={(card) => card.src}
+          previousLabel="Xem mức độ trước"
+          nextLabel="Xem mức độ tiếp theo"
+          className="mt-8 md:hidden"
+          renderItem={(card) => (
+            <div className="overflow-hidden rounded-[28px] shadow-[0_22px_56px_rgba(173,102,18,0.18)]">
+              <Image
+                src={card.src}
+                alt={card.alt}
+                width={812}
+                height={1666}
+                className="h-auto w-full"
+              />
+            </div>
+          )}
+        />
+        <div className="mt-8 hidden gap-5 md:grid md:grid-cols-3">
           {severityCards.map((card) => (
             <div
               key={card.src}

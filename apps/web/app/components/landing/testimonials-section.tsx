@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { testimonials } from "./content";
 import {
   HeartIcon,
   StarIcon,
 } from "./icons";
+import { MobileCarousel } from "./mobile-carousel";
 
 export function TestimonialsSection() {
   return (
@@ -18,7 +21,42 @@ export function TestimonialsSection() {
           Phản hồi của khách hàng
         </h2>
 
-        <div className="mt-8 space-y-5">
+        <MobileCarousel
+          items={testimonials}
+          getKey={(testimonial) => testimonial.author}
+          previousLabel="Xem phản hồi trước"
+          nextLabel="Xem phản hồi tiếp theo"
+          className="mt-8 md:hidden"
+          renderItem={(testimonial) => (
+            <article className="rounded-[28px] border border-[#8ad8ff] bg-white px-5 py-5 shadow-[0_22px_50px_rgba(33,110,164,0.12)]">
+              <div className="grid gap-5">
+                <div className="mx-auto w-full max-w-[220px]">
+                  <Image
+                    src={testimonial.imageSrc}
+                    alt={testimonial.imageAlt}
+                    width={558}
+                    height={346}
+                    className="h-auto w-full rounded-[20px]"
+                  />
+                  <div className="mt-3 flex justify-center gap-1 text-[#ff8b00]">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <StarIcon key={index} className="size-4" />
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[1.1rem] leading-relaxed text-[#3b4450]">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
+                  <p className="mt-3 text-[1.2rem] font-black leading-snug text-[#5a5a5a]">
+                    {testimonial.author}
+                  </p>
+                </div>
+              </div>
+            </article>
+          )}
+        />
+        <div className="mt-8 hidden space-y-5 md:block">
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.author}

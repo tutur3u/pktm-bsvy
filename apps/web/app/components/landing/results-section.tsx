@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { MobileCarousel } from "./mobile-carousel";
 import { resultImages } from "./content";
 
 export function ResultsSection() {
@@ -17,7 +20,25 @@ export function ResultsSection() {
             className="mx-auto h-auto w-full max-w-[1060px]"
           />
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <MobileCarousel
+          items={resultImages}
+          getKey={(image) => image.src}
+          previousLabel="Xem kết quả trước"
+          nextLabel="Xem kết quả tiếp theo"
+          className="mt-4 md:hidden"
+          renderItem={(image) => (
+            <div className="overflow-hidden rounded-[26px] bg-white p-3 shadow-[0_20px_50px_rgba(33,110,164,0.12)] ring-1 ring-[#cbeaff]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={1160}
+                height={816}
+                className="h-fit w-full rounded-[22px]"
+              />
+            </div>
+          )}
+        />
+        <div className="mt-4 hidden gap-4 md:grid md:grid-cols-2">
           {resultImages.map((image) => (
             <div
               key={image.src}
