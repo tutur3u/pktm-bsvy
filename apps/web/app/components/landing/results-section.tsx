@@ -28,7 +28,7 @@ export function ResultsSection() {
                 alt={image.alt}
                 width={1160}
                 height={816}
-                className="h-auto w-full rounded-[22px]"
+                className="h-fit w-full rounded-[22px]"
               />
             </div>
           ))}

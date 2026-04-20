@@ -30,7 +30,7 @@ export function SeveritySection() {
           cơ biến chứng và tâm lý mặc cảm.
         </p>
 
-        <div className="mt-8">
+        <div className="mt-4">
           <Image
             src="/assets/quote.png"
             alt="Lời khuyên của PGS TS BS. Trần Thanh Vỹ."
