@@ -12,9 +12,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "PKTM SG | Điều trị lõm ngực bằng phương pháp Nuss",
+  title: "Điều trị lõm ngực",
   description:
-    "Landing page giới thiệu dịch vụ điều trị lõm ngực bằng phương pháp Nuss của PGS TS BS. Trần Thanh Vỹ.",
+    "Điều trị lõm ngực bằng phương pháp tiên tiến cùng chuyên gia hàng đầu",
 };
 
 export default function RootLayout({
