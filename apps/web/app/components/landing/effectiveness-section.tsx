@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { LeadForm } from "../lead-form";
 import {
-  HOTLINE_HREF,
-  stats,
+    HOTLINE_HREF,
+    stats,
 } from "./content";
 
 export function EffectivenessSection() {

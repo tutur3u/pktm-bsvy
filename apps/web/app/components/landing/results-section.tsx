@@ -17,7 +17,7 @@ export function ResultsSection() {
             className="mx-auto h-auto w-full max-w-[1060px]"
           />
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {resultImages.map((image) => (
             <div
               key={image.src}
