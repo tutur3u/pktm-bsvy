@@ -1,13 +1,7 @@
 import Image from "next/image";
 import { LeadForm } from "../lead-form";
-import {
-  HOTLINE_DISPLAY,
-  HOTLINE_HREF,
-} from "./content";
-import {
-  MapPinIcon,
-  PhoneIcon,
-} from "./icons";
+import { HOTLINE_DISPLAY, HOTLINE_HREF } from "./content";
+import { MapPinIcon, PhoneIcon } from "./icons";
 
 export function ContactSection() {
   return (
@@ -41,7 +35,8 @@ export function ContactSection() {
                     <MapPinIcon className="size-5" />
                   </span>
                   <p>
-                    Địa chỉ: 606/24 Đường 3/2, Phường Diên Hồng, TP. Hồ Chí Minh
+                    Địa chỉ: 606/24 Đường 3/2, Phường&nbsp;Diên&nbsp;Hồng, TP.
+                    Hồ Chí Minh
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

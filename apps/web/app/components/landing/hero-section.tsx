@@ -46,7 +46,7 @@ export function HeroSection() {
                   2000+
                 </p>
                 <p className="mt-1 text-sm font-semibold leading-snug text-[#44627c] xl:text-[0.95rem]">
-                  Ca điều trị lõm ngực thành công
+                  Ca điều trị lõm&nbsp;ngực thành công
                 </p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export function HeroSection() {
                 <CheckIcon className="size-4" />
               </span>
               <p className="text-sm font-semibold leading-snug xl:text-[0.95rem]">
-                Tiên phong ứng dụng kỹ thuật NUSS tại Việt Nam từ năm 2008
+                Tiên phong ứng dụng kỹ thuật NUSS tại Việt&nbsp;Nam từ năm 2008
               </p>
             </div>
           </div>
