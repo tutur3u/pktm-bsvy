@@ -3,17 +3,12 @@ import {
   HERO_VIDEO_EMBED_URL,
   HERO_VIDEO_URL,
 } from "./content";
-import { PrimaryButton, SectionBand } from "./shared";
+import { PrimaryButton } from "./shared";
 
 export function VideoSection() {
   return (
     <section className="mx-auto max-w-[1280px] px-4 pb-8 md:px-6 md:pb-12">
       <div className="mx-auto mt-8 max-w-[1150px]">
-        <SectionBand
-          title="Video thực tế hành trình điều trị"
-          className="bg-gradient-to-r from-[#dff7ff] to-[#eef7ff] text-[#0b5ea6]"
-        />
-
         <div className="mt-6 grid gap-5 rounded-[30px] bg-white p-4 shadow-[0_24px_60px_rgba(33,110,164,0.12)] ring-1 ring-[#cfeeff] md:grid-cols-[minmax(0,1fr)_minmax(320px,400px)] md:items-center md:gap-8 md:p-6">
           <div className="order-2 rounded-[26px] bg-gradient-to-br from-[#eef8ff] via-white to-[#f2fbff] p-5 ring-1 ring-[#dcefff] md:order-1 md:p-8">
             <h2 className="mt-4 max-w-[15ch] text-[2rem] font-black uppercase leading-[0.98] text-[#0b5ea6] md:text-[2.8rem]">

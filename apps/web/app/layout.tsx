@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} text-balance`}
+        className={`${geistSans.variable} ${geistMono.variable} text-pretty`}
       >
         <Analytics />
         {children}
