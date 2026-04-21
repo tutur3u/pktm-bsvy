@@ -1,8 +1,10 @@
 export const HOTLINE_DISPLAY = "0838 000 644";
 export const HOTLINE_HREF = "tel:0838000644";
 export const APPOINTMENT_LINK = "#quick-register";
+export const HERO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/1CwoEc585oE";
+export const HERO_VIDEO_URL = "https://www.youtube.com/shorts/1CwoEc585oE";
 
-export type Tone = "blue" | "neutral" | "green";
+export type Tone = "blue" | "neutral" | "green" | "mint" | "lavender";
 
 export type CredentialHighlight = {
   tone: Tone;
@@ -47,29 +49,22 @@ export const credentialHighlights: CredentialHighlight[] = [
   {
     tone: "neutral",
     title: "Người tiên phong",
-    body:
-      "đưa kỹ thuật Nuss trong điều trị lõm ngực bẩm sinh về ứng dụng tại Việt Nam vào năm 2008",
+    body: "đưa kỹ thuật Nuss trong điều trị lõm ngực bẩm sinh về ứng dụng tại Việt Nam vào năm 2008",
   },
   {
     tone: "green",
     title:
       "Là chuyên gia trực tiếp hướng dẫn kỹ thuật Nuss cho các bệnh viện trên toàn quốc:",
-    body:
-      "Bệnh viện Quân đội 108, Bệnh viện Nhi Đồng 2, Bệnh viện Đa khoa Đà Nẵng, Gia Lai, Kon Tum, Quảng Trị, Đa khoa Hoàn Mỹ Cửu Long...",
+    body: "Bệnh viện Quân đội 108, Bệnh viện Nhi Đồng 2, Bệnh viện Đa khoa Đà Nẵng, Gia Lai, Kon Tum, Quảng Trị, Đa khoa Hoàn Mỹ Cửu Long...",
   },
   {
-    tone: "green",
+    tone: "mint",
     title: "Can thiệp thành công hơn 2.000 ca",
     body: "lõm ngực, lồi ngực",
   },
   {
-    tone: "neutral",
-    title: "Chuyển giao kỹ thuật NUSS",
-    body: "cho các bệnh viện tuyến tỉnh khắp cả nước",
-  },
-  {
-    tone: "blue",
-    title: "Thành viên Hội Phẫu thuật dị dạng Lồng ngực thế giới CIWIG",
+    tone: "lavender",
+    title: "Thành viên Hội Phẫu thuật Dị dạng Lồng ngực thế giới CIWIG",
     body: "",
   },
 ];

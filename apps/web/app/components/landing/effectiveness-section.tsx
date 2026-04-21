@@ -60,7 +60,14 @@ export function EffectivenessSection() {
                 id="quick-register-form"
                 title="Đăng ký khám ngay"
                 description="Để lại thông tin, phòng khám sẽ liên hệ xác nhận lịch hẹn sớm nhất."
-                submitLabel="Đặt khám ngay với PGS TS BS. Trần Thanh Vỹ"
+                submitLabel={
+                  <span className="flex flex-col items-center leading-tight">
+                    <span>Đặt khám ngay với</span>
+                    <span className="whitespace-nowrap">
+                      PGS TS BS. Trần Thanh Vỹ
+                    </span>
+                  </span>
+                }
                 hotlineHref={HOTLINE_HREF}
                 theme="blue"
               />

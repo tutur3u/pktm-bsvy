@@ -1,21 +1,50 @@
 import type { ReactNode } from "react";
 import type { QuickContact, Tone } from "./content";
-import {
-  ArrowRightIcon,
-  MessengerIcon,
-  PhoneIcon,
-} from "./icons";
+import { ArrowRightIcon, MessengerIcon, PhoneIcon } from "./icons";
 
-export function toneClasses(tone: Tone) {
+export function credentialToneStyles(tone: Tone) {
+  if (tone === "lavender") {
+    return {
+      card: "bg-gradient-to-r from-[#eff2ff] to-[#d8ddff] ring-[#d9dfff] shadow-[0_18px_38px_rgba(103,120,255,0.14)]",
+      icon: "bg-[#6b7cff] shadow-[0_12px_24px_rgba(107,124,255,0.28)]",
+      title: "text-[#2f3f8b]",
+      body: "text-[#33476d]",
+    };
+  }
+
+  if (tone === "mint") {
+    return {
+      card: "bg-gradient-to-r from-[#e4fffa] to-[#c7f6ef] ring-[#d0f5ee] shadow-[0_18px_38px_rgba(20,184,166,0.12)]",
+      icon: "bg-[#10b8a4] shadow-[0_12px_24px_rgba(16,184,164,0.24)]",
+      title: "text-[#155b58]",
+      body: "text-[#2d5f66]",
+    };
+  }
+
   if (tone === "green") {
-    return "bg-gradient-to-r from-[#dfffe9] to-[#bff8d0]";
+    return {
+      card: "bg-gradient-to-r from-[#e7ffef] to-[#cbf6d6] ring-[#d9f8e1] shadow-[0_18px_38px_rgba(18,184,105,0.12)]",
+      icon: "bg-[#16b86a] shadow-[0_12px_24px_rgba(22,184,106,0.24)]",
+      title: "text-[#1b5d3b]",
+      body: "text-[#295549]",
+    };
   }
 
   if (tone === "blue") {
-    return "bg-gradient-to-r from-[#dff4ff] to-[#caecff]";
+    return {
+      card: "bg-gradient-to-r from-[#dff3ff] to-[#b7ddff] ring-[#cfe8ff] shadow-[0_18px_38px_rgba(33,110,164,0.12)]",
+      icon: "bg-[#1e9ae8] shadow-[0_12px_24px_rgba(30,154,232,0.24)]",
+      title: "text-[#1d5389]",
+      body: "text-[#2b4d74]",
+    };
   }
 
-  return "bg-gradient-to-r from-white to-[#eef4f8]";
+  return {
+    card: "bg-gradient-to-r from-[#fff4e3] to-[#ffe5c4] ring-[#ffe7cb] shadow-[0_18px_38px_rgba(255,153,72,0.12)]",
+    icon: "bg-[#ff9c4a] shadow-[0_12px_24px_rgba(255,156,74,0.24)]",
+    title: "text-[#8d4e1f]",
+    body: "text-[#6f553f]",
+  };
 }
 
 export function QuickContactButton({
@@ -75,7 +104,7 @@ export function SectionBand({
 }) {
   return (
     <div
-      className={`rounded-[20px] px-5 py-3 text-center text-xl font-black uppercase tracking-[0.02em] shadow-[0_10px_24px_rgba(35,130,184,0.12)] md:text-[2rem] ${className ?? ""}`}
+      className={`rounded-[20px] border-4 border-[#d8efff] px-5 py-3 text-center text-xl font-black uppercase tracking-[0.02em] shadow-[0_10px_24px_rgba(35,130,184,0.12)] md:text-[2rem] ${className ?? ""}`}
     >
       {title}
     </div>

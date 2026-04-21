@@ -8,11 +8,13 @@ import { ResultsSection } from "./results-section";
 import { SeveritySection } from "./severity-section";
 import { SymptomsSection } from "./symptoms-section";
 import { TestimonialsSection } from "./testimonials-section";
+import { VideoSection } from "./video-section";
 
 export function LandingPage() {
   return (
     <main className="bg-[#f6fcff] text-[#14314c]">
       <HeroSection />
+      <VideoSection />
       <CredentialsSection />
       <NussMethodSection />
       <EffectivenessSection />

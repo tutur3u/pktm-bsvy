@@ -25,7 +25,7 @@ export function HeroSection() {
         <div className="pointer-events-none absolute bottom-0 right-[-10%] top-8 md:top-32 bottom-1.5 w-[60%] md:right-[7%] md:w-[50%]">
           <Image
             priority
-            src="/assets/bs-vy.png"
+            src="/assets/bs-vy-2.png"
             alt=""
             fill
             className="object-contain object-bottom"

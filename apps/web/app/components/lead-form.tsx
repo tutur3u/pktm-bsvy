@@ -1,12 +1,12 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, ReactNode, useState } from "react";
 
 type LeadFormProps = {
   id?: string;
   title: string;
   description?: string;
-  submitLabel: string;
+  submitLabel: ReactNode;
   hotlineHref: string;
   theme: "light" | "blue";
 };
@@ -133,7 +133,7 @@ export function LeadForm({
 
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-[18px] bg-[#0aa75c] px-6 py-4 text-center text-lg font-black uppercase tracking-[0.02em] text-white shadow-[0_14px_28px_rgba(10,167,92,0.35)] transition hover:-translate-y-0.5 hover:bg-[#099651]"
+          className="inline-flex w-full items-center justify-center rounded-[18px] bg-[#0aa75c] px-4 py-4 text-center text-[0.95rem] font-black uppercase tracking-[0.02em] text-white shadow-[0_14px_28px_rgba(10,167,92,0.35)] transition hover:-translate-y-0.5 hover:bg-[#099651] md:px-6 md:text-lg"
         >
           {submitLabel}
         </button>
