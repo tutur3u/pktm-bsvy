@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -11,7 +12,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
-const siteUrl = 'https://dieutrilomnguc.vn/'
+const siteUrl = "https://dieutrilomnguc.vn/";
 
 const siteName = "Phòng khám PGS TS BS. Trần Thanh Vỹ";
 const pageTitle = "Điều trị lõm ngực bằng phương pháp Nuss";
@@ -63,7 +64,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={`${geistSans.variable} ${geistMono.variable} text-balance`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} text-balance`}
+      >
+        <Analytics />
         {children}
       </body>
     </html>
