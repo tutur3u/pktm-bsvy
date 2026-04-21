@@ -18,7 +18,7 @@ export function SeveritySection() {
           nextLabel="Xem mức độ tiếp theo"
           className="mt-8 md:hidden"
           renderItem={(card) => (
-            <div className="overflow-hidden rounded-[28px] shadow-[0_22px_56px_rgba(173,102,18,0.18)]">
+            <div className="mx-auto w-full max-w-[390px] overflow-hidden rounded-[28px] shadow-[0_22px_56px_rgba(173,102,18,0.18)]">
               <Image
                 src={card.src}
                 alt={card.alt}
@@ -46,9 +46,9 @@ export function SeveritySection() {
           ))}
         </div>
         <p className="mx-auto mt-8 max-w-[1100px] text-center text-[1.3rem] font-black leading-snug text-[#0b5ea6] md:text-[1.9rem]">
-          <span className="text-[#ff7a00]">Lời khuyên:</span> Phẫu thuật sớm
-          (từ 6 - 14 tuổi) đạt hiệu quả cao nhất khi xương còn mềm, giảm nguy
-          cơ biến chứng và tâm lý mặc cảm.
+          <span className="text-[#ff7a00]">Lời khuyên:</span> Phẫu thuật sớm (từ
+          6 - 14 tuổi) đạt hiệu quả cao nhất khi xương còn mềm, giảm nguy cơ
+          biến chứng và tâm lý mặc cảm.
         </p>
 
         <div className="mt-4">
