@@ -1,6 +1,7 @@
 import { ContactSection } from "./contact-section";
 import { CredentialsSection } from "./credentials-section";
 import { EffectivenessSection } from "./effectiveness-section";
+import { FooterSection } from "./footer-section";
 import { HeroSection } from "./hero-section";
 import { NussMethodSection } from "./nuss-method-section";
 import { PressSection } from "./press-section";
@@ -24,6 +25,7 @@ export function LandingPage() {
       <SeveritySection />
       <TestimonialsSection />
       <ContactSection />
+      <FooterSection />
     </main>
   );
 }

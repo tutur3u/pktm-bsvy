@@ -119,6 +119,25 @@ export function ArrowRightIcon({ className }: { className?: string }) {
   );
 }
 
+export function ExternalLinkIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.9"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M14 5h5v5" />
+      <path d="m10 14 9-9" />
+      <path d="M19 13v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4" />
+    </svg>
+  );
+}
+
 export function StarIcon({ className }: { className?: string }) {
   return (
     <svg

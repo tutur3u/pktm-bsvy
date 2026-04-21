@@ -3,6 +3,14 @@ export const HOTLINE_HREF = "tel:0838000644";
 export const APPOINTMENT_LINK = "#quick-register";
 export const HERO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/1CwoEc585oE";
 export const HERO_VIDEO_URL = "https://www.youtube.com/shorts/1CwoEc585oE";
+export const CLINIC_ADDRESS =
+  "606/24 Đường 3/2, Phường Diên Hồng, TP. Hồ Chí Minh, Việt Nam";
+export const CLINIC_MAP_EMBED_URL =
+  "https://www.google.com/maps?q=606%2F24%20%C4%90%C6%B0%E1%BB%9Dng%203%2F2%2C%20Ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam&z=17&output=embed";
+export const CLINIC_MAP_URL =
+  "https://www.google.com/maps/search/?api=1&query=606%2F24%20%C4%90%C6%B0%E1%BB%9Dng%203%2F2%2C%20Ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam";
+export const FOOTER_COPYRIGHT =
+  "© 2026 Phòng khám Tĩnh mạch Sài Gòn. Bảo lưu mọi quyền.";
 
 export type Tone = "blue" | "neutral" | "green" | "mint" | "lavender";
 
@@ -38,6 +46,13 @@ export type QuickContact = {
   label: string;
   href: string;
   kind: "text" | "phone" | "message";
+};
+
+export type SymptomRegisterCallout = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  ctaLabel: string;
 };
 
 export const credentialHighlights: CredentialHighlight[] = [
@@ -91,6 +106,13 @@ export const symptomItems: SymptomItem[] = [
     rest: "khi chạy nhảy, vui đùa",
   },
 ];
+
+export const symptomRegisterCallout: SymptomRegisterCallout = {
+  eyebrow: "Thăm khám sớm",
+  title: "Nếu con có những dấu hiệu trên, đừng để tình trạng kéo dài thêm.",
+  body: "Đăng ký tư vấn cùng PGS TS BS. Trần Thanh Vỹ để được đánh giá đúng mức độ lõm ngực và hướng can thiệp phù hợp cho con.",
+  ctaLabel: "Đăng ký tư vấn ngay",
+};
 
 export const stats: Stat[] = [
   { value: "2000+", label: "Ca phẫu thuật thành công" },

@@ -5,3 +5,6 @@
 - 2026-04-20: Mobile carousels with long image lists need capped indicator windows plus a current/total counter; rendering one dot per item breaks the control row on the press section.
 - 2026-04-21: YouTube Shorts on this landing page should live in a dedicated post-hero section with a portrait ratio instead of being stretched into a wide embed that fights the asset-led layout.
 - 2026-04-21: Desktop Shorts work better when the portrait video sits inside a deliberate phone-style frame and supporting layout, instead of a narrow standalone embed floating in whitespace.
+- 2026-04-21: Contact/location changes belong in `landing/content.ts`; keeping the address and map URLs there lets the contact section gain embeds or external map actions without hardcoding clinic data in JSX.
+- 2026-04-21: In the contact card, map actions work better as a compact header affordance above the embed; a big footer pill under the map reads like an unrelated CTA and pulls attention away from the form.
+- 2026-04-21: When a landing asset pair includes a JPG background and a transparent PNG foreground, build the section from both layers and keep live copy in HTML so client feedback like “move the text off the image” stays easy to implement.
