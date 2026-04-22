@@ -8,3 +8,4 @@
 - 2026-04-21: Contact/location changes belong in `landing/content.ts`; keeping the address and map URLs there lets the contact section gain embeds or external map actions without hardcoding clinic data in JSX.
 - 2026-04-21: In the contact card, map actions work better as a compact header affordance above the embed; a big footer pill under the map reads like an unrelated CTA and pulls attention away from the form.
 - 2026-04-21: When a landing asset pair includes a JPG background and a transparent PNG foreground, build the section from both layers and keep live copy in HTML so client feedback like “move the text off the image” stays easy to implement.
+- 2026-04-22: Keep press screenshots image-led, but store each article URL and accessible label in `landing/content.ts` so the grid stays unchanged while links remain easy to update.

@@ -35,6 +35,16 @@ export type MediaImage = {
   alt: string;
 };
 
+export type VideoIntroContent = {
+  title: string;
+  body: string;
+};
+
+export type PressItem = MediaImage & {
+  href: string;
+  label: string;
+};
+
 export type Testimonial = {
   imageSrc: string;
   imageAlt: string;
@@ -119,6 +129,11 @@ export const stats: Stat[] = [
   { value: "18+", label: "Năm ứng dụng phương pháp Nuss" },
 ];
 
+export const videoIntroContent: VideoIntroContent = {
+  title: "TÌM HIỂU VỀ BÁC SĨ TRẦN THANH VỸ ĐIỀU TRỊ LÕM NGỰC",
+  body: "Video giới thiệu giúp phụ huynh tìm hiểu thêm về Bác sĩ Trần Thanh Vỹ, kinh nghiệm chuyên môn và định hướng đúng điều trị lõm ngực.",
+};
+
 export const resultImages: MediaImage[] = [
   {
     src: "/assets/result-2.png",
@@ -130,13 +145,83 @@ export const resultImages: MediaImage[] = [
   },
 ];
 
-export const pressImages: MediaImage[] = Array.from(
-  { length: 11 },
-  (_, index) => ({
-    src: `/assets/news-${index + 1}.png`,
-    alt: `Bài báo và nghiên cứu khoa học số ${index + 1}.`,
-  }),
-);
+export const pressItems: PressItem[] = [
+  {
+    src: "/assets/news-1.png",
+    alt: "Bài báo Thực hiện phẫu thuật lõm ngực thành công hơn 1000 ca (2016).",
+    href: "https://tapchiyhoctphcm.vn/upload/2016/20%202bvdhyd/029.pdf",
+    label: "Mở bài báo Thực hiện phẫu thuật lõm ngực thành công hơn 1000 ca (2016)",
+  },
+  {
+    src: "/assets/news-2.png",
+    alt: "Bài báo Người Lao Động về ca phẫu thuật điều trị lõm ngực đầu tiên tại TPHCM của bác sĩ Trần Thanh Vỹ.",
+    href: "https://nld.com.vn/suc-khoe/dieu-tri-lom-thanh-nguc-bam-sinh-226293.htm",
+    label:
+      "Mở bài báo Người Lao Động về ca phẫu thuật điều trị lõm ngực đầu tiên tại TPHCM",
+  },
+  {
+    src: "/assets/news-3.png",
+    alt: "Bài báo Người Lao Động về việc BV Đa khoa Đà Nẵng tiếp nhận kỹ thuật điều trị Nuss từ bác sĩ Trần Thanh Vỹ năm 2009.",
+    href: "https://nld.com.vn/suc-khoe/gia-dinh-bon-nguoi-lom-nguc-hiem-gap-2009080210117363.htm",
+    label:
+      "Mở bài báo về việc BV Đa khoa Đà Nẵng tiếp nhận kỹ thuật điều trị Nuss năm 2009",
+  },
+  {
+    src: "/assets/news-4.png",
+    alt: "Bài báo khoa học ScienceDirect về ca phẫu thuật thành công cho bé gái 7 tuổi có khe hở xương ức kết hợp với lõm ngực.",
+    href: "https://www.sciencedirect.com/science/article/pii/S2213576622003323?fbclid=IwY2xjawQkZY1leHRuA2FlbQIxMABicmlkETFLY3R6dkliNHA3eW5FRXpMc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgH__gfeFeG5aGSgoDTMXsbJRMtURVtje5p1EvMvShneT0R76dpwuBtyxiLH_aem_7e3RLsR_J8Nk8f7Z2Gsg3w",
+    label:
+      "Mở bài báo khoa học ScienceDirect về ca phẫu thuật cho bé gái 7 tuổi có khe hở xương ức kết hợp với lõm ngực",
+  },
+  {
+    src: "/assets/news-5.png",
+    alt: "Bài báo Thanh Niên về tư vấn của bác sĩ Vỹ cho trẻ bị lõm ngực bẩm sinh.",
+    href: "https://thanhnien.vn/tre-lom-nguc-bam-sinh-185421550.htm",
+    label: "Mở bài báo Thanh Niên về tư vấn cho trẻ bị lõm ngực bẩm sinh",
+  },
+  {
+    src: "/assets/news-6.png",
+    alt: "Bài báo Gia Lai Online về việc bác sĩ Vỹ hỗ trợ và hướng dẫn kỹ thuật điều trị lõm ngực bẩm sinh cho 2 bệnh nhi tại Gia Lai năm 2013.",
+    href: "https://baogialai.com.vn/ung-dung-phau-thuat-nuss-dieu-tri-benh-ly-lom-nguc-bam-sinh-post551748.html?gidzl=1t7DC_K3hpG0RiKyzn-jC05fnJllIwWq5cwNQEzF_JKRQP0-w4cgCauzbpou7QXbJJt4F6F0Gri_ymAZDG",
+    label:
+      "Mở bài báo Gia Lai Online về hỗ trợ kỹ thuật điều trị lõm ngực bẩm sinh năm 2013",
+  },
+  {
+    src: "/assets/news-7.png",
+    alt: "Bài báo khoa học về 40 ca phẫu thuật thành công tại Bệnh viện Nhi Đồng 2 từ năm 2011 đến năm 2013 bằng phương pháp NUSS.",
+    href: "https://tapchiyhoctphcm.vn/articles/12312",
+    label:
+      "Mở bài báo khoa học về 40 ca phẫu thuật thành công tại Bệnh viện Nhi Đồng 2 bằng phương pháp NUSS",
+  },
+  {
+    src: "/assets/news-8.png",
+    alt: "Bài báo Cần Thơ Online về việc bác sĩ Vỹ hỗ trợ điều trị lõm ngực cho 2 bé tại Bệnh viện Đa khoa Hoàn Mỹ Cửu Long năm 2015.",
+    href: "https://baocantho.com.vn/dieu-tri-hai-ca-lom-xuong-nguc-bam-sinh-a62028.html?gidzl=8CyW10_Hvt8dq2WB3StYT2FQAGyGaULmEjeg2K76xI8wZo4FGP2y9slQ8Lv4nxmWE8rr3pGTB_vE2T3hSm",
+    label:
+      "Mở bài báo Cần Thơ Online về hỗ trợ điều trị lõm ngực cho 2 bé năm 2015",
+  },
+  {
+    src: "/assets/news-9.png",
+    alt: "Bài viết của Bệnh viện Đa khoa Tỉnh Quảng Trị về việc tiếp nhận và chuyển giao kỹ thuật điều trị lõm ngực bằng phương pháp NUSS từ bác sĩ Vỹ năm 2022.",
+    href: "https://benhvientinh.quangtri.gov.vn/vi/news/hoat-dong-chuyen-mon/benh-vien-da-khoa-tinh-lan-dau-tien-dung-kim-loai-tao-hinh-long-nguc-cho-benh-nhan-bi-lom-nguc-bam-sinh-914.html",
+    label:
+      "Mở bài viết của Bệnh viện Đa khoa Tỉnh Quảng Trị về chuyển giao kỹ thuật NUSS năm 2022",
+  },
+  {
+    src: "/assets/news-10.png",
+    alt: "Bài báo khoa học NIH về 39 bệnh nhân được phẫu thuật bằng hệ thống cố định thanh kẹp và vít tại BV ĐHYD TPHCM năm 2023.",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11751887/",
+    label:
+      "Mở bài báo khoa học NIH về 39 bệnh nhân tại BV ĐHYD TPHCM năm 2023",
+  },
+  {
+    src: "/assets/news-11.png",
+    alt: "Bài báo Lao Động về việc bác sĩ Vỹ hỗ trợ và hướng dẫn kỹ thuật Nuss cho Bệnh viện Đa khoa Tỉnh Kon Tum vào tháng 7 năm 2024.",
+    href: "https://laodong.vn/suc-khoe/phau-thuat-nhieu-truong-hop-bi-di-dang-long-nguc-o-kon-tum-1370027.ldo",
+    label:
+      "Mở bài báo Lao Động về hỗ trợ kỹ thuật Nuss tại Kon Tum vào tháng 7 năm 2024",
+  },
+];
 
 export const severityCards: MediaImage[] = [
   {

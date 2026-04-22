@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { pressImages } from "./content";
+import { pressItems } from "./content";
 import { MobileCarousel } from "./mobile-carousel";
 
 export function PressSection() {
@@ -13,34 +13,47 @@ export function PressSection() {
 
       <section className="mx-auto max-w-[1280px] px-4 py-8 md:px-6 md:py-12">
         <MobileCarousel
-          items={pressImages}
-          getKey={(image) => image.src}
+          items={pressItems}
+          getKey={(item) => item.src}
           previousLabel="Xem bài báo trước"
           nextLabel="Xem bài báo tiếp theo"
           className="md:hidden"
-          renderItem={(image) => (
-            <div>
+          renderItem={(item) => (
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={item.label}
+              className="block rounded-[20px] outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-[#8ad8ff]"
+            >
               <Image
-                src={image.src}
-                alt={image.alt}
+                src={item.src}
+                alt={item.alt}
                 width={840}
                 height={546}
                 className="h-auto w-full"
               />
-            </div>
+            </a>
           )}
         />
         <div className="hidden gap-4 md:grid md:grid-cols-3">
-          {pressImages.map((image) => (
-            <div key={image.src}>
+          {pressItems.map((item) => (
+            <a
+              key={item.src}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={item.label}
+              className="block rounded-[20px] outline-none transition hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-[#8ad8ff]"
+            >
               <Image
-                src={image.src}
-                alt={image.alt}
+                src={item.src}
+                alt={item.alt}
                 width={840}
                 height={546}
                 className="h-auto w-full"
               />
-            </div>
+            </a>
           ))}
         </div>
       </section>
