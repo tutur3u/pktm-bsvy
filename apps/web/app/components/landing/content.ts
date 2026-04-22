@@ -125,7 +125,7 @@ export const symptomRegisterCallout: SymptomRegisterCallout = {
   eyebrow: "Thăm khám sớm",
   title: "Nếu con có những dấu hiệu trên, đừng để tình trạng kéo dài thêm.",
   body: "Đăng ký tư vấn cùng PGS TS BS. Trần Thanh Vỹ để được đánh giá đúng mức độ lõm ngực và hướng can thiệp phù hợp cho con.",
-  ctaLabel: "Đăng ký tư vấn ngay",
+  ctaLabel: "Đăng ký khám",
 };
 
 export const stats: Stat[] = [

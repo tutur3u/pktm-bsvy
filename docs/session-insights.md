@@ -11,3 +11,4 @@
 - 2026-04-22: Keep press screenshots image-led, but store each article URL and accessible label in `landing/content.ts` so the grid stays unchanged while links remain easy to update.
 - 2026-04-22: Stacked uppercase Vietnamese headlines on this landing page read better with slightly relaxed leading; `leading-[0.98]` feels too tight once the copy spans three lines.
 - 2026-04-22: When a CTA should land on the booking form, point the hash at the form itself and center-scroll that target; section-level anchors leave the fields too low in the viewport.
+- 2026-04-22: The symptom-section CTA copy comes from `apps/web/app/components/landing/content.ts`; update that content module first before touching section markup for wording-only requests.
