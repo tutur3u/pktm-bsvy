@@ -1,8 +1,10 @@
 export const HOTLINE_DISPLAY = "0838 000 644";
 export const HOTLINE_HREF = "tel:0838000644";
 export const APPOINTMENT_LINK = "#quick-register";
-export const HERO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/1CwoEc585oE";
-export const HERO_VIDEO_URL = "https://www.youtube.com/shorts/1CwoEc585oE";
+export const HERO_VIDEO_ID = "1CwoEc585oE";
+export const HERO_VIDEO_EMBED_URL = `https://www.youtube.com/embed/${HERO_VIDEO_ID}?rel=0`;
+export const HERO_VIDEO_URL = `https://www.youtube.com/shorts/${HERO_VIDEO_ID}`;
+export const HERO_VIDEO_POSTER_URL = `https://i.ytimg.com/vi/${HERO_VIDEO_ID}/maxresdefault.jpg`;
 export const CLINIC_ADDRESS =
   "606/24 Đường 3/2, Phường Diên Hồng, TP. Hồ Chí Minh, Việt Nam";
 export const CLINIC_MAP_EMBED_URL =
@@ -36,7 +38,9 @@ export type MediaImage = {
 };
 
 export type VideoIntroContent = {
-  title: string;
+  titleLead: string;
+  titleFocus: string;
+  titleTail: string;
   body: string;
 };
 
@@ -130,7 +134,9 @@ export const stats: Stat[] = [
 ];
 
 export const videoIntroContent: VideoIntroContent = {
-  title: "TÌM HIỂU VỀ BÁC SĨ TRẦN THANH VỸ ĐIỀU TRỊ LÕM NGỰC",
+  titleLead: "TÌM HIỂU VỀ",
+  titleFocus: "BÁC SĨ TRẦN THANH VỸ",
+  titleTail: "ĐIỀU TRỊ LÕM NGỰC",
   body: "Video giới thiệu giúp phụ huynh tìm hiểu thêm về Bác sĩ Trần Thanh Vỹ, kinh nghiệm chuyên môn và định hướng đúng điều trị lõm ngực.",
 };
 
