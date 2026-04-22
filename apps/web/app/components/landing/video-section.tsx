@@ -3,7 +3,7 @@ import {
   HERO_VIDEO_URL,
   videoIntroContent,
 } from "./content";
-import { PrimaryButton } from "./shared";
+import { PrimaryScrollButton } from "./primary-scroll-button";
 import { VideoPlayer } from "./video-player";
 
 export function VideoSection() {
@@ -24,12 +24,12 @@ export function VideoSection() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <PrimaryButton
+              <PrimaryScrollButton
                 href={APPOINTMENT_LINK}
                 className="w-full px-5 py-3 text-base sm:w-auto md:px-6 md:py-3.5"
               >
-                Đăng ký tư vấn ngay
-              </PrimaryButton>
+                Đăng ký khám
+              </PrimaryScrollButton>
               <a
                 href={HERO_VIDEO_URL}
                 target="_blank"

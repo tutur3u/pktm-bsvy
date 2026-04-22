@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { APPOINTMENT_LINK, symptomItems, symptomRegisterCallout } from "./content";
-import { PrimaryButton, SectionBand } from "./shared";
+import { PrimaryScrollButton } from "./primary-scroll-button";
+import { SectionBand } from "./shared";
 
 export function SymptomsSection() {
   return (
@@ -43,12 +44,12 @@ export function SymptomsSection() {
               <p className="mt-4 text-[1.02rem] leading-[1.65] text-[#34516c] md:text-[1.08rem]">
                 {symptomRegisterCallout.body}
               </p>
-              <PrimaryButton
+              <PrimaryScrollButton
                 href={APPOINTMENT_LINK}
                 className="mt-6 w-full justify-center sm:w-auto"
               >
                 {symptomRegisterCallout.ctaLabel}
-              </PrimaryButton>
+              </PrimaryScrollButton>
             </div>
           </div>
         </div>

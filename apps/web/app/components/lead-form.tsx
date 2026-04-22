@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, ReactNode, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useState } from "react";
 
 type LeadFormProps = {
   id?: string;
@@ -31,6 +31,44 @@ export function LeadForm({
 }: LeadFormProps) {
   const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<FormState>>({});
+
+  useEffect(() => {
+    if (!id) {
+      return;
+    }
+
+    const targetHash = `#${id}`;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const scrollBehavior = prefersReducedMotion ? "auto" : "smooth";
+
+    const scrollIntoCenteredView = () => {
+      if (window.location.hash !== targetHash) {
+        return;
+      }
+
+      const target = document.getElementById(id);
+
+      if (!target) {
+        return;
+      }
+
+      window.requestAnimationFrame(() => {
+        target.scrollIntoView({
+          behavior: scrollBehavior,
+          block: "center",
+        });
+      });
+    };
+
+    scrollIntoCenteredView();
+    window.addEventListener("hashchange", scrollIntoCenteredView);
+
+    return () => {
+      window.removeEventListener("hashchange", scrollIntoCenteredView);
+    };
+  }, [id]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
