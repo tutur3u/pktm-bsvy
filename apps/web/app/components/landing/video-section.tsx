@@ -12,7 +12,7 @@ export function VideoSection() {
       <div className="mx-auto mt-8 max-w-[1150px]">
         <div className="mt-6 grid gap-5 rounded-[30px] bg-white p-4 shadow-[0_24px_60px_rgba(33,110,164,0.12)] ring-1 ring-[#cfeeff] md:grid-cols-[minmax(0,1fr)_minmax(320px,400px)] md:items-center md:gap-8 md:p-6">
           <div className="order-2 rounded-[26px] bg-gradient-to-br from-[#eef8ff] via-white to-[#f2fbff] p-5 ring-1 ring-[#dcefff] md:order-1 md:p-8">
-            <h2 className="mt-4 max-w-[15ch] text-[2rem] font-black uppercase leading-[0.98] text-[#0b5ea6] md:text-[2.8rem]">
+            <h2 className="mt-4 max-w-[15ch] text-[2rem] font-black uppercase leading-[1.04] text-[#0b5ea6] md:text-[2.8rem]">
               {videoIntroContent.title}
             </h2>
             <p className="mt-4 max-w-[44ch] text-base leading-relaxed text-[#44627d] md:text-lg">
