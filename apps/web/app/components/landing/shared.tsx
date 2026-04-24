@@ -68,10 +68,13 @@ export function QuickContactButton({
         Zalo
       </span>
     );
+  const opensNewTab = href.startsWith("http");
 
   return (
     <a
       href={href}
+      target={opensNewTab ? "_blank" : undefined}
+      rel={opensNewTab ? "noreferrer" : undefined}
       className={`inline-flex h-12 min-w-12 cursor-pointer items-center justify-center rounded-full bg-white px-3.5 text-[#1768d8] shadow-[0_14px_30px_rgba(12,74,137,0.18)] ring-1 ring-[#ccecff] transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1768d8] md:h-14 md:min-w-14 md:px-4 ${className ?? ""}`}
     >
       <span className="sr-only">{label}</span>

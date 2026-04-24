@@ -1,6 +1,61 @@
 import Image from "next/image";
-import { HOTLINE_DISPLAY } from "./content";
+import {
+  HOTLINE_DISPLAY,
+  HOTLINE_HREF,
+  MESSENGER_URL,
+  ZALO_URL,
+} from "./content";
 import { CheckIcon, PhoneIcon, StarIcon } from "./icons";
+
+const contactHotspots = [
+  {
+    label: "Mở Zalo của phòng khám",
+    href: ZALO_URL,
+    desktopClassName: "left-[14.5%] top-[89%] h-[7%] w-[4.3%]",
+    mobileClassName: "left-[52.5%] top-[13%] h-[75%] w-[14%]",
+  },
+  {
+    label: "Gọi phòng khám",
+    href: HOTLINE_HREF,
+    desktopClassName: "left-[19.8%] top-[89%] h-[7%] w-[4.3%]",
+    mobileClassName: "left-[67.2%] top-[13%] h-[75%] w-[14%]",
+  },
+  {
+    label: "Mở Messenger của phòng khám",
+    href: MESSENGER_URL,
+    desktopClassName: "left-[25.2%] top-[89%] h-[7.4%] w-[4.3%]",
+    mobileClassName: "left-[82%] top-[13%] h-[75%] w-[14%]",
+  },
+];
+
+function ContactHotspots({ variant }: { variant: "desktop" | "mobile" }) {
+  return (
+    <div
+      className={`absolute inset-0 z-20 ${
+        variant === "desktop" ? "hidden md:block" : "md:hidden"
+      }`}
+    >
+      {contactHotspots.map((hotspot) => {
+        const opensNewTab = hotspot.href.startsWith("http");
+
+        return (
+          <a
+            key={`${variant}-${hotspot.label}`}
+            href={hotspot.href}
+            aria-label={hotspot.label}
+            className={`absolute rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1768d8] ${
+              variant === "desktop"
+                ? hotspot.desktopClassName
+                : hotspot.mobileClassName
+            }`}
+            target={opensNewTab ? "_blank" : undefined}
+            rel={opensNewTab ? "noreferrer" : undefined}
+          />
+        );
+      })}
+    </div>
+  );
+}
 
 export function HeroSection() {
   return (
@@ -34,6 +89,7 @@ export function HeroSection() {
             sizes="52vw"
           />
         </div>
+        <ContactHotspots variant="desktop" />
 
         <div className="absolute bottom-[8%] right-[2.5%] z-10 hidden w-[220px] flex-col gap-3 lg:flex xl:w-[250px]">
           <div className="rounded-[24px] bg-white/88 p-4 shadow-[0_20px_44px_rgba(16,68,121,0.14)] ring-1 ring-white/70 backdrop-blur-sm">
@@ -83,15 +139,18 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      <Image
-        priority
-        src="/assets/mobile-contact.png"
-        alt="Hero giới thiệu điều trị lõm ngực cùng PGS TS BS. Trần Thanh Vỹ."
-        width={774}
-        height={161}
-        className="h-auto w-full -translate-y-2.5 border-y-2 md:hidden"
-        sizes="100vw"
-      />
+      <div className="relative -translate-y-2.5 border-y-2 md:hidden">
+        <Image
+          priority
+          src="/assets/mobile-contact.png"
+          alt="Hero giới thiệu điều trị lõm ngực cùng PGS TS BS. Trần Thanh Vỹ."
+          width={774}
+          height={161}
+          className="h-auto w-full"
+          sizes="100vw"
+        />
+        <ContactHotspots variant="mobile" />
+      </div>
       <Image
         priority
         src="/assets/mobile-feature.png"

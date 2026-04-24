@@ -14,3 +14,4 @@
 - 2026-04-22: The symptom-section CTA copy comes from `apps/web/app/components/landing/content.ts`; update that content module first before touching section markup for wording-only requests.
 - 2026-04-24: `quickContacts` is only data until `FloatingQuickContacts` is mounted from the landing page; add new contact interactions through the shared button path so phone, Messenger, and Zalo stay consistent.
 - 2026-04-24: The floating Zalo action should keep the QR dialog visible while also opening the direct `https://zalo.me/0838000644` link from `quickContacts` in a new tab.
+- 2026-04-24: Baked-in hero contact icons need transparent hotspot anchors, while floating contact buttons should derive new-tab behavior from HTTP hrefs so Facebook opens separately and `tel:` stays in-place.
