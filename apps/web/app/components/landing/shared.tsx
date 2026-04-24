@@ -55,7 +55,7 @@ export function QuickContactButton({
   className,
 }: QuickContact & { className?: string }) {
   if (kind === "text" && label.toLowerCase() === "zalo") {
-    return <ZaloDialogButton label={label} className={className} />;
+    return <ZaloDialogButton label={label} href={href} className={className} />;
   }
 
   const icon =

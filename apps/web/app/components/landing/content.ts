@@ -1,5 +1,6 @@
 export const HOTLINE_DISPLAY = "0838 000 644";
 export const HOTLINE_HREF = "tel:0838000644";
+export const ZALO_URL = "https://zalo.me/0838000644";
 export const APPOINTMENT_LINK = "#quick-register-form";
 export const HERO_VIDEO_ID = "1CwoEc585oE";
 export const HERO_VIDEO_EMBED_URL = `https://www.youtube.com/embed/${HERO_VIDEO_ID}?rel=0`;
@@ -277,7 +278,7 @@ export const testimonials: Testimonial[] = [
 export const quickContacts: QuickContact[] = [
   {
     label: "Zalo",
-    href: APPOINTMENT_LINK,
+    href: ZALO_URL,
     kind: "text",
   },
   {
