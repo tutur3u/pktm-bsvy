@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { QuickContact, Tone } from "./content";
 import { ArrowRightIcon, MessengerIcon, PhoneIcon } from "./icons";
+import { ZaloDialogButton } from "./zalo-dialog-button";
 
 export function credentialToneStyles(tone: Tone) {
   if (tone === "lavender") {
@@ -53,6 +54,10 @@ export function QuickContactButton({
   kind,
   className,
 }: QuickContact & { className?: string }) {
+  if (kind === "text" && label.toLowerCase() === "zalo") {
+    return <ZaloDialogButton label={label} className={className} />;
+  }
+
   const icon =
     kind === "phone" ? (
       <PhoneIcon className="size-5 md:size-6" />
@@ -67,7 +72,7 @@ export function QuickContactButton({
   return (
     <a
       href={href}
-      className={`inline-flex h-12 min-w-12 items-center justify-center rounded-full bg-white px-3.5 text-[#1768d8] shadow-[0_14px_30px_rgba(12,74,137,0.18)] ring-1 ring-[#ccecff] transition hover:-translate-y-0.5 md:h-14 md:min-w-14 md:px-4 ${className ?? ""}`}
+      className={`inline-flex h-12 min-w-12 cursor-pointer items-center justify-center rounded-full bg-white px-3.5 text-[#1768d8] shadow-[0_14px_30px_rgba(12,74,137,0.18)] ring-1 ring-[#ccecff] transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1768d8] md:h-14 md:min-w-14 md:px-4 ${className ?? ""}`}
     >
       <span className="sr-only">{label}</span>
       {icon}

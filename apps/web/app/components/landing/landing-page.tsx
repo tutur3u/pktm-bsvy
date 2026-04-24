@@ -1,6 +1,7 @@
 import { ContactSection } from "./contact-section";
 import { CredentialsSection } from "./credentials-section";
 import { EffectivenessSection } from "./effectiveness-section";
+import { FloatingQuickContacts } from "./floating-quick-contacts";
 import { FooterSection } from "./footer-section";
 import { HeroSection } from "./hero-section";
 import { NussMethodSection } from "./nuss-method-section";
@@ -26,6 +27,7 @@ export function LandingPage() {
       <TestimonialsSection />
       <ContactSection />
       <FooterSection />
+      <FloatingQuickContacts />
     </main>
   );
 }

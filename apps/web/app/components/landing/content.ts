@@ -13,6 +13,12 @@ export const CLINIC_MAP_URL =
   "https://www.google.com/maps/search/?api=1&query=606%2F24%20%C4%90%C6%B0%E1%BB%9Dng%203%2F2%2C%20Ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam";
 export const FOOTER_COPYRIGHT =
   "© 2026 Phòng khám Tĩnh mạch Sài Gòn. Bảo lưu mọi quyền.";
+export const ZALO_CONTACT_CARD = {
+  src: "/assets/zalo.jpg",
+  alt: "Mã QR Zalo của Phòng Khám Bác sĩ Trần Thanh Vỹ.",
+  width: 984,
+  height: 1200,
+};
 
 export type Tone = "blue" | "neutral" | "green" | "mint" | "lavender";
 
